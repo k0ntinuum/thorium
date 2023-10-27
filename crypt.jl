@@ -11,7 +11,7 @@ function decrypt(p, q, r)
     for i in 1:r
         k = spin(q,r + 1 - i)
         p = reverse(p)
-        p = encode(p,k)
+        p = decode(p,k)
     end
     p
 end
