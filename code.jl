@@ -1,7 +1,7 @@
 
 function encode(p,q)
     k = copy(q)
-    printkey(k)
+    #printkey(k)
     c = zeros(Int64,length(p))
     for i in eachindex(p)
         if isodd(tr(k))
