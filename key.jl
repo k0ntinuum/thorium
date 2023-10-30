@@ -45,3 +45,11 @@ function spin(q,n)
     end
     k
 end
+
+function diag(q)
+    d = zeros(Int64,size(q)[begin])
+    for i in eachindex(q)
+        d[i] = q[i,i]
+    end
+    d
+end
