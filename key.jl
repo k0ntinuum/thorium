@@ -46,9 +46,10 @@ function spin(q,n)
     k
 end
 
-function diag(q)
+function diag(q :: Matrix{Int64})
+    print(size(q)[begin])
     d = zeros(Int64,size(q)[begin])
-    for i in eachindex(q)
+    for i in 1:size(q)[begin]
         d[i] = q[i,i]
     end
     d
