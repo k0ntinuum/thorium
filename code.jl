@@ -9,7 +9,8 @@ function encode(p,q)
         else
             c[i] = p[i]
         end
-        y = (tr(k)+p[i])%2
+        y = tr(k)+p[i]
+        #thresh(k,y)
         if isodd(y)
             spincols(k)
         else
@@ -30,7 +31,8 @@ function decode(p,q)
         else
             c[i] = p[i]
         end
-        y = (tr(k)+c[i])%2
+        y = tr(k)+c[i]
+        #thresh(k,y)
         if isodd(y)
             spincols(k)
         else

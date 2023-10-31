@@ -14,6 +14,22 @@ function spincols(k)
     end 
 end
 
+# function thresh(k)
+#     for j in 1:size(k)[begin]
+#         d = k[j,j]
+#         k[:,j] = circshift(k[:,j],d+1)
+#         k[j,:] = circshift(k[j,:],d+1)
+#     end
+# end
+# function thresh(k,p)
+#     for j in 1:size(k)[begin]
+#         d = k[j,j]
+#         k[:,j] = circshift(k[:,j],d+p+1)
+#         k[j,:] = circshift(k[j,:],d+p+1)
+#     end
+# end
+
+
 # function spinrows(k)
 #     for j in 1:size(k)[begin]
 #         if k[j,j] == 0
@@ -45,6 +61,15 @@ function spin(q,n)
     end
     k
 end
+
+
+# function spin(q,n)
+#     k = copy(q)
+#     for i in 1:n
+#         thresh(k)
+#     end
+#     k
+# end
 
 function diag(q :: Matrix{Int64})
     print(size(q)[begin])
